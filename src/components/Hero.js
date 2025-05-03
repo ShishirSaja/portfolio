@@ -46,6 +46,8 @@ const HeroContent = styled.div`
 
   @media (max-width: 480px) {
     margin-top: 4rem;
+    padding: 0.5rem;
+    width: 90%;
   }
 `;
 
@@ -55,6 +57,7 @@ const Title = styled(motion.h1)`
   color: #ffffff;
   text-shadow: 0 0 10px rgba(255, 60, 172, 0.5);
   line-height: 1.2;
+  white-space: nowrap;
 
   @media (max-width: 1024px) {
     font-size: 3.5rem;
@@ -67,6 +70,8 @@ const Title = styled(motion.h1)`
   @media (max-width: 480px) {
     font-size: 2.5rem;
     padding: 0 1rem;
+    white-space: normal;
+    word-break: keep-all;
   }
 
   @media (max-width: 360px) {
@@ -80,6 +85,10 @@ const Subtitle = styled(motion.p)`
   color: #94a3b8;
   line-height: 1.4;
   padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
 
   @media (max-width: 768px) {
     font-size: 1.2rem;
@@ -94,6 +103,10 @@ const Subtitle = styled(motion.p)`
   @media (max-width: 360px) {
     font-size: 1rem;
   }
+`;
+
+const SubtitlePart = styled.span`
+  white-space: nowrap;
 `;
 
 const SocialLinks = styled.div`
@@ -127,8 +140,8 @@ const SocialLink = styled(motion.a)`
 `;
 
 const ProfileImage = styled(motion.div)`
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   margin: 0 auto 2rem;
   overflow: hidden;
@@ -199,14 +212,18 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Hi, I'm Your Shishir S
+          Hi, I'm Shishir S
         </Title>
         <Subtitle
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          Undergraduate Software Engineer | web developer | MERN
+          <SubtitlePart>Undergraduate Software Engineer</SubtitlePart>
+          <SubtitlePart>|</SubtitlePart>
+          <SubtitlePart>Web Developer</SubtitlePart>
+          <SubtitlePart>|</SubtitlePart>
+          <SubtitlePart>MERN</SubtitlePart>
         </Subtitle>
         <SocialLinks>
           <SocialLink
