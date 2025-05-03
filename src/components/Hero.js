@@ -19,6 +19,15 @@ const HeroSection = styled.section`
   position: relative;
   overflow: hidden;
   background: linear-gradient(to bottom, #0f172a, #1e293b);
+  padding-top: 4rem;
+
+  @media (max-width: 768px) {
+    padding-top: 6rem;
+  }
+
+  @media (max-width: 480px) {
+    padding-top: 8rem;
+  }
 `;
 
 const HeroContent = styled.div`
@@ -26,6 +35,18 @@ const HeroContent = styled.div`
   z-index: 1;
   padding: 2rem;
   max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 480px) {
+    margin-top: 4rem;
+  }
 `;
 
 const Title = styled(motion.h1)`
@@ -33,12 +54,28 @@ const Title = styled(motion.h1)`
   margin-bottom: 1rem;
   color: #ffffff;
   text-shadow: 0 0 10px rgba(255, 60, 172, 0.5);
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const Subtitle = styled(motion.p)`
   font-size: 1.5rem;
   margin-bottom: 2rem;
   color: #94a3b8;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 const SocialLinks = styled.div`
@@ -46,6 +83,10 @@ const SocialLinks = styled.div`
   justify-content: center;
   gap: 1.5rem;
   margin-top: 2rem;
+
+  @media (max-width: 480px) {
+    gap: 1rem;
+  }
 `;
 
 const SocialLink = styled(motion.a)`
@@ -75,11 +116,26 @@ const ProfileImage = styled(motion.div)`
   overflow: hidden;
   border: 3px solid rgba(255, 60, 172, 0.3);
   box-shadow: 0 0 20px rgba(255, 60, 172, 0.2);
+  position: relative;
+  z-index: 2;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+  }
+
+  @media (max-width: 768px) {
+    width: 150px;
+    height: 150px;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 480px) {
+    width: 120px;
+    height: 120px;
+    margin-top: 3rem;
   }
 `;
 
@@ -90,6 +146,16 @@ const ContactInfo = styled(motion.div)`
   margin-top: 1.5rem;
   color: #94a3b8;
   font-size: 1.1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 const ContactItem = styled(motion.a)`
