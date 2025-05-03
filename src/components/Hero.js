@@ -22,11 +22,11 @@ const HeroSection = styled.section`
   padding-top: 4rem;
 
   @media (max-width: 768px) {
-    padding-top: 6rem;
+    padding-top: 8rem;
   }
 
   @media (max-width: 480px) {
-    padding-top: 8rem;
+    padding-top: 10rem;
   }
 `;
 
@@ -54,6 +54,11 @@ const Title = styled(motion.h1)`
   margin-bottom: 1rem;
   color: #ffffff;
   text-shadow: 0 0 10px rgba(255, 60, 172, 0.5);
+  line-height: 1.2;
+
+  @media (max-width: 1024px) {
+    font-size: 3.5rem;
+  }
 
   @media (max-width: 768px) {
     font-size: 3rem;
@@ -61,6 +66,11 @@ const Title = styled(motion.h1)`
 
   @media (max-width: 480px) {
     font-size: 2.5rem;
+    padding: 0 1rem;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 2.2rem;
   }
 `;
 
@@ -68,12 +78,20 @@ const Subtitle = styled(motion.p)`
   font-size: 1.5rem;
   margin-bottom: 2rem;
   color: #94a3b8;
+  line-height: 1.4;
+  padding: 0 1rem;
 
   @media (max-width: 768px) {
     font-size: 1.2rem;
+    padding: 0 1.5rem;
   }
 
   @media (max-width: 480px) {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  @media (max-width: 360px) {
     font-size: 1rem;
   }
 `;
@@ -124,18 +142,6 @@ const ProfileImage = styled(motion.div)`
     height: 100%;
     object-fit: cover;
     object-position: center;
-  }
-
-  @media (max-width: 768px) {
-    width: 150px;
-    height: 150px;
-    margin-top: 2rem;
-  }
-
-  @media (max-width: 480px) {
-    width: 120px;
-    height: 120px;
-    margin-top: 3rem;
   }
 `;
 
