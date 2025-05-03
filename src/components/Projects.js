@@ -11,22 +11,38 @@ const ProjectsSection = styled.section`
 
 const SectionTitle = styled(motion.h2)`
   font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   color: #ffffff;
+  text-align: center;
   position: relative;
-  display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
+  padding-bottom: 1rem;
+  width: 100%;
 
   &::after {
     content: "";
     position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 100%;
-    height: 3px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
     background: linear-gradient(to right, #ff3cac, #2b86c5);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem;
+
+    &::after {
+      width: 80px;
+      height: 3px;
+    }
   }
 `;
 
@@ -162,7 +178,7 @@ const Projects = () => {
   return (
     <ProjectsSection id="projects">
       <SectionTitle
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >

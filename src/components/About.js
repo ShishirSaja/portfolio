@@ -81,37 +81,71 @@ const SkillCard = styled(motion.div)`
   }
 `;
 
+const SectionTitle = styled(motion.h2)`
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+  width: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #ff3cac, #2b86c5);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem;
+
+    &::after {
+      width: 80px;
+      height: 3px;
+    }
+  }
+`;
+
 const About = () => {
   return (
     <AboutSection id="about">
       <AboutContent>
         <AboutText>
-          <motion.h2
+          <SectionTitle
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
             About Me
-          </motion.h2>
+          </SectionTitle>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-           Hi, I’m a Computer Science Engineering student with a passion for web development and technology. I enjoy building clean, functional web applications and learning how things work behind the scenes. I’m especially interested in how modern tools, real-time systems, and AI can be used to create better user experiences.
-
-I’ve been actively involved in tech events, hackathons, and workshops, which have helped me grow both as a developer and a team player. I value writing clear, maintainable code and always look for opportunities to learn and improve.
-
-
-
-
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            Outside of tech, I’m also an artist and a dancer,creative outlets that help me stay inspired and bring a fresh perspective to my work.
+            Hi, I'm a Computer Science Engineering student with a passion for
+            web development and technology. I enjoy building clean, functional
+            web applications and learning how things work behind the scenes. I'm
+            especially interested in how modern tools, real-time systems, and AI
+            can be used to create better user experiences. I've been actively
+            involved in tech events, hackathons, and workshops, which have
+            helped me grow both as a developer and a team player. I value
+            writing clear, maintainable code and always look for opportunities
+            to learn and improve. Outside of tech, I'm also an artist and a
+            dancer, creative outlets that help me stay inspired and bring a
+            fresh perspective to my work.
           </motion.p>
         </AboutText>
         <SkillsGrid>
